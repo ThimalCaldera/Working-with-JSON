@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title> Fetch API</title>
+
+    </head>
+
+
+
+    <body>
+        <h1> Fetch API - Sending JSON</h1>
+
+        <script type="text/javascript">
+
+            const myself = 
+            {
+                name: "Thimal",
+                age : "21"
+            };
+
+
+            fetch('receive.php',
+            {
+                method: 'post',
+                body : JSON.stringify(myself)
+            })
+
+            .then(function(response) 
+            {
+               return response.text();
+            })
+            .then(function(text)
+            {
+                console.log(text);
+            })
+
+            .catch(function(error)
+            {
+                console.error(error);
+            })
+
+
+        </script>
+    </body>
+</html>

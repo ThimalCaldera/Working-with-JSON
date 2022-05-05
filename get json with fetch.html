@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Fetch API - Getting JSON</title>
+    </head>
+
+    <body>
+       <h1>Getch API - Getting JSON</h1>
+       
+       <script type ="text/javascript">
+           fetch('people.json') // 1. Make a requeset to retrive JSON file  2.Take the JSON contents & pass it as a regular JS
+           .then(function(response)
+           {
+               return response.json(); //text or JSON
+           })
+           .then(function(obj1)
+           {
+               console.log(obj1);
+
+           })
+
+           .catch (function(error)
+           {
+               console.error("Something went wrong");
+               console.error(error);
+           });
+       </script>
+
+
+    </body>
+</html>

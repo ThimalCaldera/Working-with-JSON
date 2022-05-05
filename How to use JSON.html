@@ -1,0 +1,45 @@
+<html>
+
+<head>
+    <title>How to use JSON</title>
+</head>
+
+<body>
+    <h1> Working with JSON on JavaScript</h1>
+
+    <script type="text/javascript">
+
+        const meJson = `
+
+            {
+                "name": "Thimal",
+                "age" : 21,
+                "favouriteColors" : [
+                    "Blue",
+                    "Green",
+                    "Red"
+                ] }
+            
+          `;
+
+
+          const car = 
+                {
+                    make:"Toyota",
+                    model: "Land Cruiser",
+                    year: 2020
+                };
+
+            
+            
+
+            const me = JSON.parse(meJson); // Converting a JSON file into a JS Object
+            console.log(me.name);
+
+            const carJson = JSON.stringify(car); //Converting JS object to a a JSON file
+            console.log(carJson);
+
+
+    </script>
+</body>
+</html>
